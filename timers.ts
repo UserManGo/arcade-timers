@@ -6,6 +6,7 @@ namespace timer {
      * Blocks after this one will run without waiting.
      */
     //% block="after $time do"
+    //% block.loc.ru="через $time выполнить"
     //% time.defl=500
     //% handlerStatement=1
     //% %time=timePicker ms"
@@ -19,6 +20,7 @@ namespace timer {
      * within or without this code are seperated.
      */
     //% block="separately do"
+    //% block.loc.ru="выполнять фоном"
     //% handlerStatement=1
     export function background(then: () => void) {
         control.runInBackground(then)
@@ -31,6 +33,7 @@ namespace timer {
      * Also known as "debounce".
      */
     //% block="after $key settled for $time do"
+    //% block.loc.ru="выполнить $key после паузы $time"
     //% time.defl=500
     //% key.defl="action"
     //% handlerStatement=1
@@ -49,6 +52,7 @@ namespace timer {
      * Also known as "throttle".
      */
     //% block="for $key at most once every $time do"
+    //% block.loc.ru="выполнять $key не чаще одного раза каждые $time"
     //% time.defl=500
     //% key.defl="action"
     //% handlerStatement=1
